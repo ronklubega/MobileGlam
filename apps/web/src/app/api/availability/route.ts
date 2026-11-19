@@ -1,4 +1,4 @@
-import { availabilityQuerySchema } from "@glamdesk/shared";
+import { availabilityQuerySchema } from "@mobileglam/shared";
 import { handle, parseQuery } from "@/lib/http";
 import { listSlots } from "@/server/services/availability.service";
 

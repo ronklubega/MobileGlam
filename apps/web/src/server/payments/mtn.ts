@@ -1,4 +1,4 @@
-import { toMsisdn } from "@glamdesk/shared";
+import { toMsisdn } from "@mobileglam/shared";
 import { mtnEnv, coreEnv } from "@/lib/env";
 import { ProviderError, type CollectRequest, type PaymentProvider, type StatusResult } from "./types";
 

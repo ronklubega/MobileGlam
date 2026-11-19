@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { nearbySearchSchema } from "@glamdesk/shared";
+import { nearbySearchSchema } from "@mobileglam/shared";
 import { handle, parseQuery } from "@/lib/http";
 import { db } from "@/server/db";
 

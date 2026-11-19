@@ -1,4 +1,4 @@
-import { createDb, type Db } from "@glamdesk/db";
+import { createDb, type Db } from "@mobileglam/db";
 import { coreEnv } from "@/lib/env";
 
 const globalForDb = globalThis as unknown as { __db?: Db };

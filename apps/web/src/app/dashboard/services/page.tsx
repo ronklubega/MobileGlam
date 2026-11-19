@@ -1,4 +1,4 @@
-import { formatUGX } from "@glamdesk/shared";
+import { formatUGX } from "@mobileglam/shared";
 import { ActionForm, SubmitButton, inputClass, labelClass } from "@/components/forms";
 import { Badge, Card, Empty, PageHeader } from "@/components/ui";
 import { requireManager } from "@/lib/dashboard";

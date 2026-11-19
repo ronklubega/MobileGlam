@@ -1,4 +1,4 @@
-import { depositAmount, detectUgNetwork, formatUGX, normalizeUgPhone } from "@glamdesk/shared";
+import { depositAmount, detectUgNetwork, formatUGX, normalizeUgPhone } from "@mobileglam/shared";
 import { useQueryClient } from "@tanstack/react-query";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useMemo, useState } from "react";

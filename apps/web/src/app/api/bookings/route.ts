@@ -1,4 +1,4 @@
-import { createBookingSchema } from "@glamdesk/shared";
+import { createBookingSchema } from "@mobileglam/shared";
 import { requireUser } from "@/lib/auth";
 import { handle, parseBody } from "@/lib/http";
 import { createBooking } from "@/server/services/booking.service";

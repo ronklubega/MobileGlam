@@ -1,7 +1,7 @@
 "use server";
 import { randomBytes } from "node:crypto";
 import { redirect } from "next/navigation";
-import { createTenantSchema, payoutSchema } from "@glamdesk/shared";
+import { createTenantSchema, payoutSchema } from "@mobileglam/shared";
 import { supabaseAdmin } from "@/lib/auth";
 import { getContext } from "@/lib/dashboard";
 import type { ActionState } from "@/components/forms";

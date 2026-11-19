@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { addDays, dateLabel, formatDateTime, formatUGX } from "@glamdesk/shared";
+import { addDays, dateLabel, formatDateTime, formatUGX } from "@mobileglam/shared";
 import { RankedBars, SegmentedBar, Sparkline, StackedColumns, TrendLine } from "@/components/charts";
 import { pct, ugx, ugxCompact as compactUgx } from "@/lib/chart-format";
 import { Card, Empty, PageHeader } from "@/components/ui";
@@ -96,7 +96,7 @@ export function OverviewView({ s, a, entries, n }: { s: Stats; a: Analytics; ent
       {/* ── headline KPIs ── */}
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <Kpi label="Money processed" value={formatUGX(t.deposits)} cur={t.deposits} prev={prev.deposits} vs={vs} spark={daily.map((d) => d.deposits)} hint="Deposits clients paid by mobile money" />
-        <Kpi label="GlamDesk revenue" value={formatUGX(t.commission)} cur={t.commission} prev={prev.commission} vs={vs} spark={daily.map((d) => d.commission)} hint={t.deposits ? `${takeRate.toFixed(1)}% take rate` : "Commission on deposits"} />
+        <Kpi label="MobileGlam revenue" value={formatUGX(t.commission)} cur={t.commission} prev={prev.commission} vs={vs} spark={daily.map((d) => d.commission)} hint={t.deposits ? `${takeRate.toFixed(1)}% take rate` : "Commission on deposits"} />
         <Kpi label="Paid bookings" value={t.bookings.toLocaleString("en-US")} cur={t.bookings} prev={prev.bookings} vs={vs} spark={daily.map((d) => Number(d.bookings))} hint={avgDeposit ? `${ugx(avgDeposit)} average deposit` : undefined} />
         <Kpi label="New users" value={t.new_users.toLocaleString("en-US")} cur={t.new_users} prev={prev.new_users} vs={vs} spark={daily.map((d) => Number(d.new_users))} hint={`${Number(s.users).toLocaleString("en-US")} registered in total`} />
       </div>
@@ -108,10 +108,10 @@ export function OverviewView({ s, a, entries, n }: { s: Stats; a: Analytics; ent
       </div>
 
       {/* ── money over time ── */}
-      <Section title="Money flowing through GlamDesk" subtitle={`Deposits per ${a.days <= 31 ? "day" : a.days <= 120 ? "week" : "month"}, split into what businesses keep and GlamDesk's commission`}>
+      <Section title="Money flowing through MobileGlam" subtitle={`Deposits per ${a.days <= 31 ? "day" : a.days <= 120 ? "week" : "month"}, split into what businesses keep and MobileGlam's commission`}>
         {t.deposits === 0 ? <Empty>No deposits in this period yet. Paid bookings will appear here.</Empty> : (
           <StackedColumns
-            series={[{ name: "Kept by businesses", color: "var(--series-1)" }, { name: "GlamDesk commission", color: "var(--series-2)" }]}
+            series={[{ name: "Kept by businesses", color: "var(--series-1)" }, { name: "MobileGlam commission", color: "var(--series-2)" }]}
             points={buckets.map((b) => ({ label: b.label, values: [b.deposits - b.commission, b.commission] }))}
             totalLabel="Deposits"
           />
@@ -123,7 +123,7 @@ export function OverviewView({ s, a, entries, n }: { s: Stats; a: Analytics; ent
         <Section title="Registered users" subtitle="Running total of client and business accounts" figure={<Figure value={growth.at(-1)?.users ?? 0} added={t.new_users} />}>
           <TrendLine points={growth.map((g) => ({ label: g.label, value: g.users }))} unit=" users" />
         </Section>
-        <Section title="Businesses on GlamDesk" subtitle="Running total of salons, barbershops and clinics that signed up" figure={<Figure value={growth.at(-1)?.businesses ?? 0} added={t.new_businesses} />}>
+        <Section title="Businesses on MobileGlam" subtitle="Running total of salons, barbershops and clinics that signed up" figure={<Figure value={growth.at(-1)?.businesses ?? 0} added={t.new_businesses} />}>
           <TrendLine points={growth.map((g) => ({ label: g.label, value: g.businesses }))} unit=" businesses" />
         </Section>
       </div>

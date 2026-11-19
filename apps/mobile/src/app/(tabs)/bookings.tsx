@@ -1,4 +1,4 @@
-import { formatUGX } from "@glamdesk/shared";
+import { formatUGX } from "@mobileglam/shared";
 import { useRouter } from "expo-router";
 import { FlatList, RefreshControl, Text } from "react-native";
 import { Badge, Card, Empty, ErrorState, Loading, styles } from "@/components/ui";

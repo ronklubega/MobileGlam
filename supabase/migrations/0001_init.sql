@@ -1,4 +1,4 @@
--- GlamDesk core schema. All money is whole UGX (bigint). All timestamps timestamptz (UTC).
+-- MobileGlam core schema. All money is whole UGX (bigint). All timestamps timestamptz (UTC).
 create extension if not exists btree_gist;
 create extension if not exists pgcrypto;
 create extension if not exists postgis;

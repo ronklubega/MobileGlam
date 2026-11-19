@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { addDays, commissionAmount, dateLabel, formatUGX, kampalaDateOf } from "@glamdesk/shared";
+import { addDays, commissionAmount, dateLabel, formatUGX, kampalaDateOf } from "@mobileglam/shared";
 import { Card, Empty, PageHeader, Stat } from "@/components/ui";
 import { requireManager } from "@/lib/dashboard";
 import { RevenueChart, type DayPoint } from "./revenue-chart";

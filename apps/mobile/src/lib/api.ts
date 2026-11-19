@@ -35,7 +35,7 @@ async function once<T>(path: string, { method = "GET", body, signal }: Options):
     return json as T;
   } catch (e) {
     if (e instanceof ApiError) throw e;
-    throw new ApiError(0, "NETWORK", "Can't reach GlamDesk. Check your connection and try again.");
+    throw new ApiError(0, "NETWORK", "Can't reach MobileGlam. Check your connection and try again.");
   } finally {
     clearTimeout(timer);
   }

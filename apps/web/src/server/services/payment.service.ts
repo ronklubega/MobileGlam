@@ -1,6 +1,6 @@
 import { and, eq } from "drizzle-orm";
-import { formatUGX } from "@glamdesk/shared";
-import { schema } from "@glamdesk/db";
+import { formatUGX } from "@mobileglam/shared";
+import { schema } from "@mobileglam/db";
 import { db, EXCLUSION_VIOLATION, pgCode } from "../db";
 import { getProvider } from "../payments";
 import { formatKampalaTime, sendSms } from "../notifications/sms";

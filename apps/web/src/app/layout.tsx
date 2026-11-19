@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Viewport } from "next";
 
-export const metadata = { title: "GlamDesk Dashboard" };
+export const metadata = { title: "MobileGlam Dashboard" };
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

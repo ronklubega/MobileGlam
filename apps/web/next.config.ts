@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const config: NextConfig = {
   // Lets `NEXT_DIST_DIR=.next-build next build` run without clobbering a running `next dev`.
   distDir: process.env.NEXT_DIST_DIR ?? ".next",
-  transpilePackages: ["@glamdesk/shared", "@glamdesk/db"],
+  transpilePackages: ["@mobileglam/shared", "@mobileglam/db"],
   poweredByHeader: false,
   async headers() {
     return [

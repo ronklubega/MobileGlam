@@ -1,4 +1,4 @@
-import { formatUGX } from "@glamdesk/shared";
+import { formatUGX } from "@mobileglam/shared";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { Text, View } from "react-native";

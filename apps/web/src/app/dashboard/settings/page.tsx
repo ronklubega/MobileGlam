@@ -26,7 +26,7 @@ export default async function SettingsPage() {
           <label className="flex items-center gap-2 text-sm sm:col-span-2"><input type="checkbox" name="offersHomeVisits" defaultChecked={b?.offers_home_visits} /> We offer home / mobile visits</label>
           <div className="sm:col-span-2"><SubmitButton>Save details</SubmitButton></div>
         </ActionForm>
-        <p className="mt-3 text-xs text-muted">Platform commission on deposits: {(b?.commission_bps ?? 0) / 100}%. To change your map location, contact GlamDesk support.</p>
+        <p className="mt-3 text-xs text-muted">Platform commission on deposits: {(b?.commission_bps ?? 0) / 100}%. To change your map location, contact MobileGlam support.</p>
       </Card>
 
       <h2 className="mb-2 text-lg font-bold">Payout details</h2>

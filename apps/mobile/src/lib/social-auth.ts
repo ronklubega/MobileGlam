@@ -15,11 +15,11 @@ export class AuthCancelled extends Error {}
 /**
  * Where Supabase sends the user back after Google. Must be listed exactly under
  * Supabase -> Authentication -> URL Configuration -> Redirect URLs.
- * iOS's auth browser captures any redirect to our scheme itself, so glamdesk://auth-callback works even in
+ * iOS's auth browser captures any redirect to our scheme itself, so mobileglam://auth-callback works even in
  * Expo Go and never changes. Android Expo Go can only reopen exp://<lan-ip>:8081/--/auth-callback, which
- * changes with the Mac's IP; builds on both platforms use glamdesk://auth-callback.
+ * changes with the Mac's IP; builds on both platforms use mobileglam://auth-callback.
  */
-const APP_REDIRECT = "glamdesk://auth-callback";
+const APP_REDIRECT = "mobileglam://auth-callback";
 const inExpoGoOnAndroid = Platform.OS === "android" && Constants.executionEnvironment === ExecutionEnvironment.StoreClient;
 const googleRedirect = () => (inExpoGoOnAndroid ? Linking.createURL("auth-callback") : APP_REDIRECT);
 

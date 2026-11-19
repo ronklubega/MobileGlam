@@ -1,19 +1,19 @@
 {
   "expo": {
-    "name": "GlamDesk",
-    "slug": "glamdesk",
-    "scheme": "glamdesk",
+    "name": "MobileGlam",
+    "slug": "mobileglam",
+    "scheme": "mobileglam",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.glamdesk.app",
+      "bundleIdentifier": "com.mobileglam.app",
       "usesAppleSignIn": true
     },
     "android": {
-      "package": "com.glamdesk.app",
+      "package": "com.mobileglam.app",
       "adaptiveIcon": {
         "backgroundImage": "./assets/android-icon-background.png",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -38,15 +38,15 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "GlamDesk uses your location to find salons and clinics near you."
+          "locationWhenInUsePermission": "MobileGlam uses your location to find salons and clinics near you."
         }
       ],
       "expo-status-bar",
       [
         "expo-image-picker",
         {
-          "photosPermission": "GlamDesk needs your photos so you can choose a profile picture.",
-          "cameraPermission": "GlamDesk uses the camera so you can take a profile picture."
+          "photosPermission": "MobileGlam needs your photos so you can choose a profile picture.",
+          "cameraPermission": "MobileGlam uses the camera so you can take a profile picture."
         }
       ],
       "expo-web-browser",

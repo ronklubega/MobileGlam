@@ -1,7 +1,7 @@
 "use server";
 import { createClient } from "@supabase/supabase-js";
 import { revalidatePath } from "next/cache";
-import { payoutSchema } from "@glamdesk/shared";
+import { payoutSchema } from "@mobileglam/shared";
 import { supabaseAdmin } from "@/lib/auth";
 import { getContext } from "@/lib/dashboard";
 import { coreEnv } from "@/lib/env";
@@ -76,7 +76,7 @@ export async function requestPayoutChange(fd: FormData): Promise<PayoutResult> {
   await admin.from("payout_change_requests").update({ code_hash: hashOtp(env.SUPABASE_SERVICE_ROLE_KEY, reqRow.id as string, code) }).eq("id", reqRow.id);
 
   try {
-    await sendSms(parsed.data.phone, `GlamDesk: code ${code} confirms the new payout number for ${ctx.tenant.name}. Expires in 10 minutes. Never share it.`);
+    await sendSms(parsed.data.phone, `MobileGlam: code ${code} confirms the new payout number for ${ctx.tenant.name}. Expires in 10 minutes. Never share it.`);
   } catch (e) {
     console.error("[payout] sms failed", e);
     await admin.from("payout_change_requests").delete().eq("id", reqRow.id);
@@ -118,7 +118,7 @@ export async function confirmPayoutChange(fd: FormData): Promise<PayoutResult> {
   await admin.from("payout_change_requests").delete().eq("tenant_id", ctx.tenant.id);
 
   if (old?.phone && old.phone !== req.phone) {
-    sendSms(old.phone as string, `GlamDesk: the payout number for ${ctx.tenant.name} was changed to ${maskPhone(req.phone as string)}. If this wasn't you, contact support immediately.`)
+    sendSms(old.phone as string, `MobileGlam: the payout number for ${ctx.tenant.name} was changed to ${maskPhone(req.phone as string)}. If this wasn't you, contact support immediately.`)
       .catch((e) => console.error("[payout] old-number notice failed", e));
   }
   revalidatePath("/dashboard", "layout");

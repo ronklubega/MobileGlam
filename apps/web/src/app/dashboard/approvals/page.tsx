@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { formatDay } from "@glamdesk/shared";
+import { formatDay } from "@mobileglam/shared";
 import { ActionForm, SubmitButton } from "@/components/forms";
 import { Badge, Card, Empty, PageHeader } from "@/components/ui";
 import { supabaseAdmin } from "@/lib/auth";

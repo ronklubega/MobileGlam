@@ -15,7 +15,7 @@ export function AuthShell({ title, subtitle, children, footer }: { title: string
       <aside className="hidden flex-col justify-between p-12 text-white lg:flex" style={{ background: "linear-gradient(150deg, #6B33A0 0%, #3B1763 58%, #26103F 100%)" }}>
         <Logo inverted size={40} />
         <div>
-          <h2 className="max-w-md text-4xl font-extrabold leading-tight tracking-tight">Run your salon, clinic or barbershop on GlamDesk.</h2>
+          <h2 className="max-w-md text-4xl font-extrabold leading-tight tracking-tight">Run your salon, clinic or barbershop on MobileGlam.</h2>
           <ul className="mt-8 space-y-3">
             {POINTS.map((p) => (
               <li key={p} className="flex items-start gap-3 text-white/85">
@@ -24,7 +24,7 @@ export function AuthShell({ title, subtitle, children, footer }: { title: string
             ))}
           </ul>
         </div>
-        <p className="text-sm text-white/55">© {new Date().getFullYear()} GlamDesk. Built for Uganda.</p>
+        <p className="text-sm text-white/55">© {new Date().getFullYear()} MobileGlam. Built for Uganda.</p>
       </aside>
       <main className="flex items-center justify-center px-6 py-12">
         <div className="w-full max-w-sm">

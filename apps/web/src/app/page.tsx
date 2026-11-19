@@ -7,7 +7,7 @@ import { Reveal } from "@/components/landing/reveal";
 import { supabaseServer } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
-  title: "GlamDesk — Beauty bookings, simplified",
+  title: "MobileGlam — Beauty bookings, simplified",
   description: "Online booking, Mobile Money deposits and SMS reminders for salons, barbershops and hair clinics in Uganda.",
 };
 export const dynamic = "force-dynamic";
@@ -52,7 +52,7 @@ export default async function Home() {
       {/* ───── Header ───── */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#26103F]/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-          <Link href="/" aria-label="GlamDesk home"><Logo inverted size={34} /></Link>
+          <Link href="/" aria-label="MobileGlam home"><Logo inverted size={34} /></Link>
           <nav className="hidden items-center gap-8 text-sm font-medium text-white/80 md:flex" aria-label="Main">
             {NAV.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
           </nav>
@@ -88,7 +88,7 @@ export default async function Home() {
               </Reveal>
               <Reveal delay={200}>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75">
-                  GlamDesk lets clients find and book your salon, barbershop or hair clinic online, pay a deposit by Mobile Money, and get reminded by SMS. You get a calendar that never double-books and a dashboard that shows your money.
+                  MobileGlam lets clients find and book your salon, barbershop or hair clinic online, pay a deposit by Mobile Money, and get reminded by SMS. You get a calendar that never double-books and a dashboard that shows your money.
                 </p>
               </Reveal>
               <Reveal delay={300} className="mt-9 flex flex-wrap gap-3">
@@ -98,7 +98,7 @@ export default async function Home() {
                 <a href="#how" className="rounded-full border border-white/25 px-6 py-3.5 text-base font-semibold text-white transition hover:bg-white/10">See how it works</a>
               </Reveal>
               <Reveal delay={400}>
-                <p className="mt-6 text-sm text-white/55">Clients book in the GlamDesk mobile app. Businesses run everything from this website.</p>
+                <p className="mt-6 text-sm text-white/55">Clients book in the MobileGlam mobile app. Businesses run everything from this website.</p>
               </Reveal>
             </div>
             <Reveal delay={250}><PhoneDemo /></Reveal>
@@ -107,7 +107,7 @@ export default async function Home() {
         </section>
 
         {/* ───── Business types ticker ───── */}
-        <section aria-label="Who GlamDesk is for" className="overflow-hidden border-b border-[#e5dfec] bg-white py-6">
+        <section aria-label="Who MobileGlam is for" className="overflow-hidden border-b border-[#e5dfec] bg-white py-6">
           <div className="lp-marquee flex w-max gap-12 whitespace-nowrap text-sm font-bold uppercase tracking-widest text-[#5b2a86]/70">
             {Array.from({ length: 2 }).flatMap((_, k) => ["Hair salons", "Barbershops", "Hair clinics", "Braiding studios", "Home-visit stylists", "Trichology"].map((t) => <span key={`${k}-${t}`} className="flex items-center gap-12">{t}<span aria-hidden className="text-[#F7C948]">✦</span></span>))}
           </div>
@@ -240,7 +240,7 @@ export default async function Home() {
             </Reveal>
             <Reveal delay={150} className="order-1 lg:order-2">
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">No more calling around, or waiting for a reply</h2>
-              <p className="mt-5 text-lg leading-relaxed text-[#6b6577]">Clients open the GlamDesk app, see who is open near them, and book in a few taps. The deposit is paid with the Mobile Money they already use, and the slot is held while they approve it on their phone.</p>
+              <p className="mt-5 text-lg leading-relaxed text-[#6b6577]">Clients open the MobileGlam app, see who is open near them, and book in a few taps. The deposit is paid with the Mobile Money they already use, and the slot is held while they approve it on their phone.</p>
             </Reveal>
           </div>
         </section>
@@ -263,7 +263,7 @@ export default async function Home() {
       <footer className="border-t border-[#e5dfec] bg-white">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-[#6b6577] sm:flex-row">
           <Logo size={28} />
-          <p>© {new Date().getFullYear()} GlamDesk. Built for Uganda.</p>
+          <p>© {new Date().getFullYear()} MobileGlam. Built for Uganda.</p>
           <div className="flex gap-5"><Link href="/login" className="hover:text-[#5b2a86]">Sign in</Link><Link href="/register" className="hover:text-[#5b2a86]">Create account</Link></div>
         </div>
       </footer>

@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { formatDateTime, formatUGX } from "@glamdesk/shared";
+import { formatDateTime, formatUGX } from "@mobileglam/shared";
 import { supabaseAdmin } from "@/lib/auth";
 import { ActionForm, SubmitButton, inputClass } from "@/components/forms";
 import { Card, Empty, PageHeader } from "@/components/ui";

@@ -1,6 +1,6 @@
 import { and, eq, inArray, sql } from "drizzle-orm";
-import { depositAmount, formatUGX, isSlotBookable, kampalaDateOf, kampalaInstant, type CreateBookingInput } from "@glamdesk/shared";
-import { schema } from "@glamdesk/db";
+import { depositAmount, formatUGX, isSlotBookable, kampalaDateOf, kampalaInstant, type CreateBookingInput } from "@mobileglam/shared";
+import { schema } from "@mobileglam/db";
 import { errors } from "@/lib/http";
 import { db, EXCLUSION_VIOLATION, pgCode } from "../db";
 import { getProvider, ProviderError } from "../payments";

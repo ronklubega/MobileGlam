@@ -1,4 +1,4 @@
-import { detectUgNetwork, normalizeUgPhone, type UgNetwork } from "@glamdesk/shared";
+import { detectUgNetwork, normalizeUgPhone, type UgNetwork } from "@mobileglam/shared";
 import * as AppleAuthentication from "expo-apple-authentication";
 import * as Haptics from "expo-haptics";
 import { LinearGradient } from "expo-linear-gradient";
@@ -139,7 +139,7 @@ export default function SignIn() {
           </Animated.View>
 
           <Animated.View style={{ alignItems: "center", opacity: intro, transform: [{ translateY: intro.interpolate({ inputRange: [0, 1], outputRange: [16, 0] }) }] }}>
-            <Text style={[s.brand, compactHero && { fontSize: 26, marginTop: 10 }]}>GlamDesk</Text>
+            <Text style={[s.brand, compactHero && { fontSize: 26, marginTop: 10 }]}>Mobile<Text style={{ color: GOLD }}>Glam</Text></Text>
             {!compactHero ? <Text style={s.tagline}>Look good. Book in seconds.</Text> : null}
           </Animated.View>
 
@@ -189,7 +189,7 @@ export default function SignIn() {
                 icon={<Text style={{ fontSize: 18 }}>📱</Text>} label="Continue with phone number" style={s.primaryBtn} textStyle={{ color: "#fff" }}
               />
 
-              <Text style={s.legal}>By continuing you agree to GlamDesk’s Terms of Service and Privacy Policy.</Text>
+              <Text style={s.legal}>By continuing you agree to MobileGlam’s Terms of Service and Privacy Policy.</Text>
             </View>
           ) : step === "phone" ? (
             <View>

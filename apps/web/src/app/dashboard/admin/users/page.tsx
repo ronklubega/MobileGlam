@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatDay } from "@glamdesk/shared";
+import { formatDay } from "@mobileglam/shared";
 import { Badge, Card, Empty, PageHeader } from "@/components/ui";
 import { inputClass } from "@/components/forms";
 import { supabaseAdmin } from "@/lib/auth";

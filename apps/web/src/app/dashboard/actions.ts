@@ -3,7 +3,7 @@ import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { z } from "zod";
-import { clientNoteSchema, createServiceSchema } from "@glamdesk/shared";
+import { clientNoteSchema, createServiceSchema } from "@mobileglam/shared";
 import { getContext, type DashboardContext } from "@/lib/dashboard";
 import type { ActionState } from "@/components/forms";
 

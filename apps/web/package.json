@@ -1,5 +1,5 @@
 {
-  "name": "@glamdesk/web",
+  "name": "@mobileglam/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,8 +10,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@glamdesk/db": "*",
-    "@glamdesk/shared": "*",
+    "@mobileglam/db": "*",
+    "@mobileglam/shared": "*",
     "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.45.0",
     "@tailwindcss/postcss": "^4.3.3",

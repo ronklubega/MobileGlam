@@ -1,11 +1,11 @@
 import Svg, { Path } from "react-native-svg";
 
-/** The GlamDesk "G" with its gold sparkle (brand/logo-glyph.svg), drawn as vectors so it is crisp at any size. */
+/** The MobileGlam "M" crowned with a gold sparkle (brand/logo-glyph.svg), drawn as vectors so it is crisp at any size. */
 export function LogoGlyph({ size = 64, sparkle = true }: { size?: number; sparkle?: boolean }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 64 64">
-      <Path d="M42.4 24.6 A13.5 13.5 0 1 0 45.5 32.5 H33.5" fill="none" stroke="#fff" strokeWidth={6} strokeLinecap="round" strokeLinejoin="round" />
-      {sparkle ? <Path d="M47.5 9 L49.4 14.6 L55 16.5 L49.4 18.4 L47.5 24 L45.6 18.4 L40 16.5 L45.6 14.6 Z" fill="#F7C948" /> : null}
+      <Path d="M16 46 V22 L32 38 L48 22 V46" fill="none" stroke="#fff" strokeWidth={6.5} strokeLinecap="round" strokeLinejoin="round" />
+      {sparkle ? <Path d="M32 9.5 L34.25 15.25 L40 17.5 L34.25 19.75 L32 25.5 L29.75 19.75 L24 17.5 L29.75 15.25 Z" fill="#F7C948" /> : null}
     </Svg>
   );
 }

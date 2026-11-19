@@ -1,4 +1,4 @@
-import { formatUGX } from "@glamdesk/shared";
+import { formatUGX } from "@mobileglam/shared";
 import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import { Image, ScrollView, Text, View } from "react-native";
 import { Badge, Button, Card, ErrorState, Loading, colors, styles } from "@/components/ui";

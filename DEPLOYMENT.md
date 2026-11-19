@@ -1,4 +1,4 @@
-# Deploying GlamDesk
+# Deploying MobileGlam
 
 Order matters: backend first (everything else needs its public URL), then Supabase hooks, then payments, then the mobile app.
 
@@ -21,7 +21,7 @@ Auth -> Providers -> Email: keep "Confirm email" ON in production.
 | `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase -> Settings -> API |
 | `SUPABASE_SERVICE_ROLE_KEY` | Secret. Never in the mobile app |
 | `DATABASE_URL` | **Session pooler** string, letters/numbers-only password |
-| `APP_BASE_URL` | Your final https URL, e.g. `https://app.glamdesk.ug` (used for payment callbacks) |
+| `APP_BASE_URL` | Your final https URL, e.g. `https://app.mobileglam.ug` (used for payment callbacks) |
 | `CRON_SECRET` | 32+ random chars: `openssl rand -hex 24` |
 | `PLATFORM_ADMIN_EMAILS` | Your email(s): enables Approvals and Refunds |
 | `AT_USERNAME`, `AT_API_KEY`, `AT_SENDER_ID` | Africa's Talking (live app, not `sandbox`) |

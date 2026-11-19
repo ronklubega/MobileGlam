@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { addDays, dateLabel, formatTime, formatUGX, kampalaDateOf, kampalaInstant } from "@glamdesk/shared";
+import { addDays, dateLabel, formatTime, formatUGX, kampalaDateOf, kampalaInstant } from "@mobileglam/shared";
 import { ActionForm, SubmitButton } from "@/components/forms";
 import { Badge, Card, Empty, PageHeader, Stat } from "@/components/ui";
 import { SetupChecklist } from "@/components/setup-checklist";

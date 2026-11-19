@@ -1,1 +1,1 @@
-export { dateLabel, formatDateTime, formatDay, formatTime, upcomingDates } from "@glamdesk/shared";
+export { dateLabel, formatDateTime, formatDay, formatTime, upcomingDates } from "@mobileglam/shared";

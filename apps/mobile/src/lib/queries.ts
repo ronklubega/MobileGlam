@@ -1,7 +1,7 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import type { CreateBookingInput } from "@glamdesk/shared";
+import type { CreateBookingInput } from "@mobileglam/shared";
 import type { z } from "zod";
-import type { createBookingSchema } from "@glamdesk/shared";
+import type { createBookingSchema } from "@mobileglam/shared";
 import { api } from "./api";
 import { supabase } from "./supabase";
 

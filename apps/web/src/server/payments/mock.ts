@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import { schema } from "@glamdesk/db";
+import { schema } from "@mobileglam/db";
 import { db } from "../db";
 import type { PaymentProvider, ProviderId, StatusResult } from "./types";
 

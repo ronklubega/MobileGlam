@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatDay } from "@glamdesk/shared";
+import { formatDay } from "@mobileglam/shared";
 import { Card, Empty, PageHeader } from "@/components/ui";
 import { getContext } from "@/lib/dashboard";
 

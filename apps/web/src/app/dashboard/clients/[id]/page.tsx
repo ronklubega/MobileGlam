@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { z } from "zod";
-import { formatDateTime, formatUGX } from "@glamdesk/shared";
+import { formatDateTime, formatUGX } from "@mobileglam/shared";
 import { ActionForm, SubmitButton, inputClass } from "@/components/forms";
 import { Badge, Card, Empty, PageHeader } from "@/components/ui";
 import { getContext } from "@/lib/dashboard";

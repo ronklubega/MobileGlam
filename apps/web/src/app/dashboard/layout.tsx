@@ -96,7 +96,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
 
         {ctx.tenant?.suspended_at ? (
           <div role="alert" className="border-b border-line bg-danger-soft px-4 py-2.5 text-center text-sm font-medium text-danger">
-            {ctx.tenant.name} is suspended and hidden from clients{ctx.tenant.suspension_reason ? `: ${ctx.tenant.suspension_reason}` : ""}. Contact GlamDesk support to resolve this.
+            {ctx.tenant.name} is suspended and hidden from clients{ctx.tenant.suspension_reason ? `: ${ctx.tenant.suspension_reason}` : ""}. Contact MobileGlam support to resolve this.
           </div>
         ) : ctx.tenant && !ctx.tenant.is_active ? (
           <div role="status" className="border-b border-line bg-warn-soft px-4 py-2.5 text-center text-sm font-medium text-warn">
@@ -109,7 +109,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
             <div className="rounded-2xl border border-line bg-surface p-6">
               <h1 className="text-xl font-bold">No business linked to this account</h1>
               <p className="mt-2 text-sm text-muted">
-                Signed in as {ctx.user.email}. You haven't set up a business yet. Register one now, or ask the GlamDesk team to link your account to an existing one.
+                Signed in as {ctx.user.email}. You haven't set up a business yet. Register one now, or ask the MobileGlam team to link your account to an existing one.
               </p>
               <a href="/onboarding" className="mt-4 inline-block rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-on-brand">Set up your business</a>
             </div>

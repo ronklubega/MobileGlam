@@ -1,4 +1,4 @@
-import { toNationalNumber } from "@glamdesk/shared";
+import { toNationalNumber } from "@mobileglam/shared";
 import { airtelEnv } from "@/lib/env";
 import { ProviderError, type CollectRequest, type PaymentProvider, type StatusResult } from "./types";
 

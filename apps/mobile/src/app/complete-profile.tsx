@@ -14,7 +14,7 @@ export default function CompleteProfile() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.bg }}>
       <ScrollView contentContainerStyle={{ padding: 24 }} keyboardShouldPersistTaps="handled">
-        <Text style={styles.h1}>Welcome to GlamDesk</Text>
+        <Text style={styles.h1}>Welcome to MobileGlam</Text>
         <Text style={[styles.muted, { marginTop: 4, marginBottom: 24 }]}>Tell salons who's booking. Your photo is optional.</Text>
         <ProfileForm profile={profile} submitLabel="Continue" />
         <Button title="Sign out" variant="ghost" onPress={() => supabase.auth.signOut()} style={{ marginTop: 24, borderWidth: 0 }} />

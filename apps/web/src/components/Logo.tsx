@@ -1,19 +1,19 @@
 import { useId } from "react";
 
-/** GlamDesk brand mark: gradient tile, white "G", gold sparkle. Source of truth: /brand/logo-mark.svg */
+/** MobileGlam brand mark: gradient tile, white "M" crowned with a gold sparkle. Source of truth: /brand/logo-mark.svg */
 export function LogoMark({ size = 36 }: { size?: number }) {
   // Unique per instance: a gradient defined inside a display:none copy of the logo can't be referenced by a visible one.
   const gid = `gd-${useId().replace(/:/g, "")}`;
   return (
-    <svg width={size} height={size} viewBox="0 0 64 64" role="img" aria-label="GlamDesk" className="shrink-0">
+    <svg width={size} height={size} viewBox="0 0 64 64" role="img" aria-label="MobileGlam" className="shrink-0">
       <defs>
         <linearGradient id={gid} x1="8" y1="4" x2="58" y2="62" gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#8447C4" /><stop offset="1" stopColor="#3B1763" />
         </linearGradient>
       </defs>
       <rect width="64" height="64" rx="16" fill={`url(#${gid})`} />
-      <path d="M42.4 24.6 A13.5 13.5 0 1 0 45.5 32.5 H33.5" fill="none" stroke="#fff" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M47.5 9 L49.4 14.6 L55 16.5 L49.4 18.4 L47.5 24 L45.6 18.4 L40 16.5 L45.6 14.6 Z" fill="#F7C948" />
+      <path d="M16 46 V22 L32 38 L48 22 V46" fill="none" stroke="#fff" strokeWidth="6.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M32 9.5 L34.25 15.25 L40 17.5 L34.25 19.75 L32 25.5 L29.75 19.75 L24 17.5 L29.75 15.25 Z" fill="#F7C948" />
     </svg>
   );
 }
@@ -24,7 +24,7 @@ export function Logo({ size = 36, inverted = false, tagline = false }: { size?: 
       <LogoMark size={size} />
       <span className="leading-none">
         <span className={`block text-xl font-extrabold tracking-tight ${inverted ? "text-white" : "text-ink"}`}>
-          Glam<span className={inverted ? "text-[#F7C948]" : "text-brand"}>Desk</span>
+          Mobile<span className={inverted ? "text-[#F7C948]" : "text-brand"}>Glam</span>
         </span>
         {tagline ? <span className={`mt-1 block text-[11px] font-medium tracking-wide ${inverted ? "text-white/70" : "text-muted"}`}>Beauty bookings, simplified</span> : null}
       </span>

@@ -1,5 +1,5 @@
 {
-  "name": "glamdesk",
+  "name": "mobileglam",
   "private": true,
   "workspaces": [
     "apps/*",

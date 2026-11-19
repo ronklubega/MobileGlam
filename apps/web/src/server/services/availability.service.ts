@@ -1,7 +1,7 @@
 import { and, eq } from "drizzle-orm";
 import { sql } from "drizzle-orm";
-import { computeSlots, kampalaInstant, kampalaWeekday, type TimeRange } from "@glamdesk/shared";
-import { schema } from "@glamdesk/db";
+import { computeSlots, kampalaInstant, kampalaWeekday, type TimeRange } from "@mobileglam/shared";
+import { schema } from "@mobileglam/db";
 import { errors } from "@/lib/http";
 import { db } from "../db";
 

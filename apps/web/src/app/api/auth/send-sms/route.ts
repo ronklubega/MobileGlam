@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
-import { normalizeUgPhone } from "@glamdesk/shared";
+import { normalizeUgPhone } from "@mobileglam/shared";
 import { smsHookEnv } from "@/lib/env";
 import { verifyStandardWebhook } from "@/lib/standard-webhook";
 import { sendSms } from "@/server/notifications/sms";
@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
   if (!phone) return hookError(400, "Phone sign-in is only available for Ugandan mobile numbers.");
 
   try {
-    await sendSms(phone, `Your GlamDesk code is ${parsed.data.sms.otp}. It expires in 5 minutes. Never share it with anyone.`);
+    await sendSms(phone, `Your MobileGlam code is ${parsed.data.sms.otp}. It expires in 5 minutes. Never share it with anyone.`);
   } catch (e) {
     console.error("[send-sms hook] delivery failed", e);
     return hookError(502, "Couldn't send the SMS. Please try again.");

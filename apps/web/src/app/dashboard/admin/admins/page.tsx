@@ -1,4 +1,4 @@
-import { formatDay } from "@glamdesk/shared";
+import { formatDay } from "@mobileglam/shared";
 import { ActionForm, SubmitButton, inputClass } from "@/components/forms";
 import { Badge, Card, PageHeader } from "@/components/ui";
 import { supabaseAdmin } from "@/lib/auth";
