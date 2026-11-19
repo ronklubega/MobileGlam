@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f3fa; --surface: #ffffff; --ink: #1e1b24; --muted: #6b6577; --line: #e5dfec;
+  --brand: #5b2a86; --on-brand: #ffffff; --brand-soft: #f1e8f9;
+  --danger: #b42318; --danger-soft: #fee4e2; --success: #067647; --success-soft: #dcfae6; --warn: #b54708; --warn-soft: #fef0c7;
+  --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --grid: #ede8f2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141218; --surface: #1d1a23; --ink: #f0eef4; --muted: #a39dae; --line: #332e3b;
+    --brand: #b48be0; --on-brand: #1d1a23; --brand-soft: #2b2238;
+    --danger: #f97066; --danger-soft: #3b1a17; --success: #47cd89; --success-soft: #12301f; --warn: #fdb022; --warn-soft: #3a2a0a;
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --grid: #2a2531;
+  }
+}
+@theme inline {
+  --color-bg: var(--bg); --color-surface: var(--surface); --color-ink: var(--ink); --color-muted: var(--muted);
+  --color-line: var(--line); --color-brand: var(--brand); --color-on-brand: var(--on-brand); --color-brand-soft: var(--brand-soft);
+  --color-danger: var(--danger); --color-danger-soft: var(--danger-soft); --color-success: var(--success);
+  --color-success-soft: var(--success-soft); --color-warn: var(--warn); --color-warn-soft: var(--warn-soft);
+}
+body { background: var(--bg); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+
+/* ───────── Landing page ───────── */
+html { scroll-behavior: smooth; }
+[data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+[data-reveal].is-in { opacity: 1; transform: none; }
+
+.lp-hero { background: radial-gradient(1200px 600px at 75% -10%, #7a3cb8 0%, transparent 60%), linear-gradient(160deg, #3B1763 0%, #26103F 55%, #170a29 100%); }
+.lp-orb { position: absolute; border-radius: 9999px; filter: blur(70px); opacity: .5; animation: lp-drift 14s ease-in-out infinite alternate; }
+@keyframes lp-drift { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(40px,-30px,0) scale(1.15); } }
+/* How-it-works portrait: fade its left edge into the section on wide screens */
+@media (min-width: 1024px) { .lp-how-photo { -webkit-mask-image: linear-gradient(to right, transparent 0, #000 38%); mask-image: linear-gradient(to right, transparent 0, #000 38%); } }
+.lp-float { animation: lp-bob 6s ease-in-out infinite; }
+@keyframes lp-bob { 50% { transform: translateY(-12px); } }
+.lp-shine { background: linear-gradient(100deg, #F7C948 20%, #fff3c4 45%, #F7C948 70%); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: lp-shine 5s linear infinite; }
+@keyframes lp-shine { to { background-position: -200% 0; } }
+
+/* phone walkthrough: 4 screens, 14s loop */
+.lp-screen { opacity: 0; animation: lp-screen 14s infinite; }
+.lp-s1 { animation-name: lp-s1; } .lp-s2 { animation-name: lp-s2; } .lp-s3 { animation-name: lp-s3; } .lp-s4 { animation-name: lp-s4; }
+@keyframes lp-s1 { 0%,22% { opacity: 1; transform: none; } 26%,100% { opacity: 0; transform: translateX(-24px); } }
+@keyframes lp-s2 { 0%,24% { opacity: 0; transform: translateX(24px); } 28%,48% { opacity: 1; transform: none; } 52%,100% { opacity: 0; transform: translateX(-24px); } }
+@keyframes lp-s3 { 0%,50% { opacity: 0; transform: translateX(24px); } 54%,72% { opacity: 1; transform: none; } 76%,100% { opacity: 0; transform: translateX(-24px); } }
+@keyframes lp-s4 { 0%,74% { opacity: 0; transform: scale(.94); } 79%,96% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+.lp-tap { animation: lp-tap 14s infinite; }
+@keyframes lp-tap { 0%,16% { transform: none; box-shadow: none; } 19% { transform: scale(.97); } 22%,100% { transform: none; } }
+.lp-pick { animation: lp-pick 14s infinite; }
+@keyframes lp-pick { 0%,30% { background: #fff; color: #1e1b24; } 34%,100% { background: #5b2a86; color: #fff; } }
+.lp-pulse { animation: lp-pulse 1.6s ease-out infinite; }
+@keyframes lp-pulse { 0% { box-shadow: 0 0 0 0 rgba(255,204,0,.55); } 100% { box-shadow: 0 0 0 28px rgba(255,204,0,0); } }
+.lp-dot { width: 8px; height: 8px; border-radius: 9999px; background: #5b2a86; animation: lp-dot 1s ease-in-out infinite; }
+@keyframes lp-dot { 0%,100% { opacity: .25; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-4px); } }
+.lp-check { stroke-dasharray: 40; stroke-dashoffset: 40; animation: lp-check 14s infinite; }
+@keyframes lp-check { 0%,78% { stroke-dashoffset: 40; } 86%,100% { stroke-dashoffset: 0; } }
+.lp-chip { animation: lp-chip 14s infinite; opacity: 0; }
+.lp-chip-a { animation-name: lp-chip-a; } .lp-chip-b { animation-name: lp-chip-b; } .lp-chip-c { animation-name: lp-chip-c; }
+@keyframes lp-chip-a { 0%,30% { opacity: 0; transform: translateY(10px) scale(.9); } 36%,50% { opacity: 1; transform: none; } 54%,100% { opacity: 0; } }
+@keyframes lp-chip-b { 0%,76% { opacity: 0; transform: translateY(10px) scale(.9); } 82%,96% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes lp-chip-c { 0%,82% { opacity: 0; transform: translateY(10px) scale(.9); } 88%,98% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+
+/* steps connector + dashboard bars grow when revealed */
+.lp-line { transform-origin: left; transform: scaleX(0); transition: transform 1.2s .3s cubic-bezier(.2,.7,.2,1); }
+.is-in .lp-line, .lp-line.is-in { transform: scaleX(1); }
+.lp-bar { transform-origin: bottom; transform: scaleY(0); transition: transform .9s cubic-bezier(.2,.8,.2,1); }
+.is-in .lp-bar { transform: scaleY(1); }
+.lp-marquee { animation: lp-marquee 28s linear infinite; }
+@keyframes lp-marquee { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-reveal], .lp-line, .lp-bar { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .lp-orb, .lp-float, .lp-shine, .lp-marquee, .lp-pulse, .lp-dot, .lp-tap, .lp-pick, .lp-chip { animation: none !important; }
+  .lp-screen { animation: none !important; opacity: 0; }
+  .lp-s4 { opacity: 1; } .lp-check { animation: none; stroke-dashoffset: 0; } .lp-chip { opacity: 1; }
+}

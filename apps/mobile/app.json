@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "GlamDesk",
+    "slug": "glamdesk",
+    "scheme": "glamdesk",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.glamdesk.app",
+      "usesAppleSignIn": true
+    },
+    "android": {
+      "package": "com.glamdesk.app",
+      "adaptiveIcon": {
+        "backgroundImage": "./assets/android-icon-background.png",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "backgroundColor": "#4A2273",
+          "dark": {
+            "image": "./assets/splash-icon.png",
+            "backgroundColor": "#2A1146"
+          }
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "GlamDesk uses your location to find salons and clinics near you."
+        }
+      ],
+      "expo-status-bar",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "GlamDesk needs your photos so you can choose a profile picture.",
+          "cameraPermission": "GlamDesk uses the camera so you can take a profile picture."
+        }
+      ],
+      "expo-web-browser",
+      "expo-apple-authentication"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
